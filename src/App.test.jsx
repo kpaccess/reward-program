@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from "vitest"; // Import from Vitest
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import App from "./App";
 import { fetchTransactions } from "./api";
 

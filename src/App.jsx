@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchTransactions } from "./api";
-import CustomerList from "./CustomerList";
+import CustomerList from "./components/CustomerList";
+import "./App.css";
 
 const App = () => {
   const [data, setData] = useState([]);

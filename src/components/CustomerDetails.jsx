@@ -30,15 +30,15 @@ const CustomerDetails = ({ customer }) => {
       {showDetails && (
         <div>
           <ul>
-            {Object.entries(pointsPerMonth).map((month, points) => {
+            {Object.entries(pointsPerMonth).map(([month, points]) => {
               return (
                 <li key={month}>
-                  {month.join(" ")} : {points} points
+                  {month} : {points} points
                 </li>
               );
             })}
           </ul>
-          <p>Total points: {totalPoints}</p>
+          <p className="total-points">Total points: {totalPoints}</p>
         </div>
       )}
     </div>
