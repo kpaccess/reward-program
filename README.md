@@ -4,10 +4,38 @@ This React.js + Vite application calculates and displays rewared points for cust
 
 ### Table of Contents
 
+- [File Structure](#file_structure)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
   - [Points Calculation Rules](#points-calculation-rules)
+- [Loading](#loading)
+- [Error](#error)
+- [Success](#success)
+- [Usage](#usage)
+
+## File Structure
+
+- src
+  - api
+    - api.js
+  - components
+    - App.jsx
+    - App.test.jsx
+    - CustomerDetails.jsx
+    - CustomerDetails.test.jsx
+    - CustomerList.jsx
+  - data
+    - data.js
+    - mockData.js
+  - styles
+    - App.css
+    - index.css
+  - utils
+    - calculatePoints.js
+    - calculatePoints.test.js
+      main.jsx
+      index.jsx
 
 ## Features
 
@@ -56,3 +84,19 @@ For example:
   - 50 dollars between 50 and 100 = 50 \* 1 = 50 points
 - A transaction of **$75** results in **25 points**:
   - 25 dollars between 50 and 100 = 25 \* 1 = 25 points
+
+## Loading
+
+- When data is being loaded, the app displays a loading message: `Loading ...`
+
+## Error
+
+- If there is an error while fetching data, an error message is displayed: `Error loading data.`
+
+## Success
+
+- When data is successfully fetched, the amount is computed, and the date and points are displayed
+
+## Usage
+
+- To run the app, start your development server and visit the specified URL in your browser. The app will display the transactions and their calculated points based on the rules mentioned above.

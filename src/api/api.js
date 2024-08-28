@@ -1,4 +1,4 @@
-import { transactions } from "./data";
+import { transactions } from "../data/data";
 
 export const fetchTransactions = () => {
   return new Promise((resolve) => {

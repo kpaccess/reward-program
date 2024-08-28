@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { fetchTransactions } from "./api";
-import CustomerList from "./components/CustomerList";
-import "./App.css";
+import App from "./components/App.jsx";
+import { fetchTransactions } from "./api/api.js";
 
-const App = () => {
+const Driver = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -22,13 +21,6 @@ const App = () => {
     getData();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error loading data</p>;
-
-  return (
-    <div>
-      <CustomerList data={data} />
-    </div>
-  );
+  return <App data={data} loading={loading} error={error} />;
 };
-export default App;
+export default Driver;

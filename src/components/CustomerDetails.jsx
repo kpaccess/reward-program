@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { calculatePoints } from "./calculatePoints";
+import { calculatePoints } from "../utils/calculatePoints";
 
 const CustomerDetails = ({ customer }) => {
   const { transactions, customerName } = customer;
@@ -8,6 +8,7 @@ const CustomerDetails = ({ customer }) => {
 
   const pointsPerMonth = transactions.reduce((acc, transaction) => {
     const date = new Date(transaction.date);
+
     const monthYear = `${date.getMonth() + 1}-${date.getFullYear()}`;
     const points = calculatePoints(transaction.amount);
 
@@ -15,7 +16,6 @@ const CustomerDetails = ({ customer }) => {
       acc[monthYear] = 0;
     }
     acc[monthYear] += points;
-
     return acc;
   }, {});
 
@@ -26,9 +26,11 @@ const CustomerDetails = ({ customer }) => {
 
   return (
     <div>
-      <h3 onClick={toggleDetails}>{customerName}</h3>
+      <h3 data-testid="customer-name" onClick={toggleDetails}>
+        {customerName}
+      </h3>
       {showDetails && (
-        <div>
+        <div data-testid="customer-details">
           <ul>
             {Object.entries(pointsPerMonth).map(([month, points]) => {
               return (

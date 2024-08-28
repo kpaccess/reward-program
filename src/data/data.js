@@ -3,9 +3,9 @@ export const transactions = [
     customerId: 1,
     customerName: "John Doe",
     transactions: [
-      { date: "2024-04-01", amount: 120 },
-      { date: "2024-05-15", amount: 75 },
-      { date: "2024-06-02", amount: 200 },
+      { date: "2024-04-12", amount: 120.9 },
+      { date: "2024-05-15", amount: 75.5 },
+      { date: "2024-06-02", amount: 200.4 },
     ],
   },
   {
@@ -21,9 +21,9 @@ export const transactions = [
     customerId: 3,
     customerName: "Jack Doe",
     transactions: [
-      { date: "2024-07-01", amount: 200 },
-      { date: "2024-08-15", amount: 55 },
-      { date: "2024-09-02", amount: 80 },
+      { date: "2024-07-01", amount: 200.65 },
+      { date: "2024-08-15", amount: 55.5 },
+      { date: "2024-09-02", amount: 80.8 },
     ],
   },
 ];
