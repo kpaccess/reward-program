@@ -11,10 +11,10 @@ const Rewards = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((customer) => {
+          {data.map((customer, idx) => {
             const totalPoints = totalPoint(customer);
             return (
-              <tr>
+              <tr key={idx}>
                 <td>{customer.customerName}</td>
                 <td>{totalPoints}</td>
               </tr>
