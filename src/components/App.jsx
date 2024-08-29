@@ -1,5 +1,7 @@
-import CustomerList from "./CustomerList";
 import "../styles/App.css";
+import AllTransactions from "./AllTransactions";
+import MonthlyTransactions from "./MonthlyTransactions";
+import Rewards from "./Rewards";
 
 const App = ({ data, loading, error }) => {
   if (loading) return <p data-testid="loading">Loading...</p>;
@@ -7,7 +9,9 @@ const App = ({ data, loading, error }) => {
 
   return (
     <div>
-      <CustomerList data={data} />
+      <MonthlyTransactions data={data} />
+      <AllTransactions data={data} />
+      <Rewards data={data} />
     </div>
   );
 };

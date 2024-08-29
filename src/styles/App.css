@@ -2,3 +2,39 @@
   font-weight: 700;
   color: cadetblue;
 }
+
+table {
+  background-color: bisque;
+  width: 50%;
+}
+
+th,
+td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: 1px solid #ddd;
+}
+
+.all-transactions {
+  padding: 8px;
+  margin-bottom: 4rem;
+}
+
+.all-transactions th {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.rewards th {
+  background-color: chocolate;
+  color: white;
+}
+
+.customers {
+  margin-bottom: 4rem;
+}
+
+.customers th {
+  background-color: dodgerblue;
+  color: white;
+}

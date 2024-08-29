@@ -17,3 +17,10 @@ export const calculatePoints = (amount) => {
   }
   return points;
 };
+
+export const totalPoint = (customer) => {
+  return customer.transactions.reduce(
+    (sum, transaction) => sum + calculatePoints(transaction.amount),
+    0
+  );
+};
