@@ -4,11 +4,16 @@ import MonthlyTransactions from "./MonthlyTransactions";
 import Rewards from "./Rewards";
 
 const App = ({ data, loading, error }) => {
-  if (loading) return <p data-testid="loading">Loading...</p>;
-  if (error) return <p data-testid="error">Error loading data</p>;
+  if (loading) return <p data-testid="loading" className="loader"></p>;
+  if (error)
+    return (
+      <p data-testid="error" className="error">
+        Error loading data
+      </p>
+    );
 
   return (
-    <div>
+    <div className="wrapper">
       <MonthlyTransactions data={data} />
       <AllTransactions data={data} />
       <Rewards data={data} />

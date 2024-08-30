@@ -20,14 +20,16 @@ This React.js + Vite application calculates and displays rewared points for cust
   - api
     - api.js
   - components
+    - AllTransactions.jsx
+    - AllTransactions.test.jsx
     - App.jsx
     - App.test.jsx
-    - CustomerDetails.jsx
-    - CustomerDetails.test.jsx
-    - CustomerList.jsx
+    - MonthlyTransactions.jsx
+    - MonthlyTransactions.test.jsx
+    - Rewards.jsx
+    - Rewards.test.jsx
   - data
     - data.js
-    - mockData.js
   - styles
     - App.css
     - index.css
@@ -87,15 +89,17 @@ For example:
 
 ## Loading
 
-- When data is being loaded, the app displays a loading message: `Loading ...`
+- When data is being loaded, the app displays a loading message: <img src="./src/images/loader.png">
 
 ## Error
 
-- If there is an error while fetching data, an error message is displayed: `Error loading data.`
+- If there is an error while fetching data, an error message is displayed:
+  <img src="./src/images/error.png">
 
 ## Success
 
 - When data is successfully fetched, the amount is computed, and the date and points are displayed
+  <img src="./src/images/success.png">
 
 ## Usage
 

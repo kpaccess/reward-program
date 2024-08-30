@@ -2,7 +2,9 @@ import { totalPoint } from "../utils/calculatePoints";
 const Rewards = ({ data }) => {
   return (
     <div className="rewards">
-      <h1>Total Rewards for each customer for last three months.</h1>
+      <h1 data-testid="reward-header">
+        Total Rewards for each customer for last three months.
+      </h1>
       <table>
         <thead>
           <tr>
@@ -11,7 +13,7 @@ const Rewards = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((customer, idx) => {
+          {data?.map((customer, idx) => {
             const totalPoints = totalPoint(customer);
             return (
               <tr key={idx}>

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { ErrorBoundary } from "react-error-boundary";
 import App from "./components/App.jsx";
 import { fetchTransactions } from "./api/api.js";
+import { ErrorFallback } from "./utils/ErrorFallback.jsx";
 
 const Driver = () => {
   const [data, setData] = useState([]);
@@ -14,13 +16,18 @@ const Driver = () => {
         setData(response);
         setLoading(false);
       } catch (err) {
-        setError(err);
+        setError(err.message || "An error occurred while fetching data");
+      } finally {
         setLoading(false);
       }
     };
     getData();
   }, []);
 
-  return <App data={data} loading={loading} error={error} />;
+  return (
+    <ErrorBoundary fallback={() => ErrorFallback(error)}>
+      <App data={data} loading={loading} error={error} />
+    </ErrorBoundary>
+  );
 };
 export default Driver;
