@@ -4,8 +4,7 @@ import { transactions } from "../data/data";
 
 describe(" Monthly Transactions", () => {
   it("renders correctily with provided data", () => {
-    const { debug } = render(<MonthlyTransactions data={transactions} />);
-    debug();
+    render(<MonthlyTransactions data={transactions} />);
 
     expect(
       screen.getByText(

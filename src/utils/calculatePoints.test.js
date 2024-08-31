@@ -1,4 +1,4 @@
-import { calculatePoints } from "./calculatePoints";
+import { calculatePoints, totalPoint } from "./calculatePoints";
 
 describe("calculatePoints", () => {
   it("should return 0 points for transactions below $50", () => {
@@ -10,5 +10,15 @@ describe("calculatePoints", () => {
   });
   it("should return correct points for transactions above $100", () => {
     expect(calculatePoints(120)).toBe(90);
+  });
+});
+
+describe("totalPoint", () => {
+  it("should calculate total points correctly for a customer with multiple transactions", () => {
+    const customer = {
+      transactions: [{ amount: 120 }, { amount: 80 }, { amount: 30 }],
+    };
+
+    expect(totalPoint(customer)).toBe(120);
   });
 });
