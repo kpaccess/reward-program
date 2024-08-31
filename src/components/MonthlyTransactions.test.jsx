@@ -1,14 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import { describe, it, expect } from "vitest";
 import MonthlyTransactions from "./MonthlyTransactions";
 import { transactions } from "../data/data";
-
-vi.mock("../../utilts/caculatePoints", () => ({
-  caculatePoints: vi.fn((amount) => amount),
-  totalPoint: vi.fn((amount) => amount),
-}));
-
-const fn = vi.fn();
 
 describe(" Monthly Transactions", () => {
   it("renders correctily with provided data", () => {

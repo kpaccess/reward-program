@@ -1,16 +1,9 @@
-import { render, screen, waitFor } from "@testing-library/react";
-import { describe, it, expect, vi } from "vitest";
+import { render, screen } from "@testing-library/react";
 import Rewards from "./Rewards";
-import { fetchCustomerData } from "../api/api";
-
-vi.mock("../api/api", () => ({
-  fetchCustomerData: vi.fn(),
-}));
 
 describe("Rewards", () => {
   it(" Renders loading state initially", () => {
-    const { debug } = render(<Rewards />);
-    debug();
+    render(<Rewards />);
 
     expect(
       screen.getByRole("columnheader", { name: /customer name/i })
