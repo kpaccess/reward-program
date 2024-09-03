@@ -3,19 +3,10 @@ export const calculatePoints = (amount) => {
 
   if (roundedAmount <= 50) return 0;
 
-  let points = 0;
-
-  // Points for spending between $50 and $100
-  if (roundedAmount > 50 && roundedAmount <= 100) {
-    points = roundedAmount - 50;
-  }
-
-  //points for spending over $100
-  if (roundedAmount > 100) {
-    points += (roundedAmount - 100) * 2;
-    points += 50;
-  }
-  return points;
+  // If the amount is over 100, points are calculated as 2*(amount - 100) + 50.
+  return roundedAmount <= 100
+    ? roundedAmount - 50
+    : (roundedAmount - 100) * 2 + 50;
 };
 
 export const totalPoint = (customer) => {
