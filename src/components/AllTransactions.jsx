@@ -1,4 +1,5 @@
 import { calculatePoints } from "../utils/calculatePoints";
+import { getYear, getMonth } from "../utils/getDates";
 
 const AllTransactions = ({ data }) => {
   return (
@@ -8,7 +9,10 @@ const AllTransactions = ({ data }) => {
         <thead>
           <tr>
             <th data-testid="customer-name">Customer Name</th>
-            <th data-testid="date">Date</th>
+            <th data-testid="customer-id">Customer Id</th>
+            <th data-testid="year">Year</th>
+            <th data-testid="month">Month</th>
+            <th data-testid="transaction-id">Transaction Id</th>
             <th data-testid="amount">Amount</th>
             <th data-testid="points">Points</th>
           </tr>
@@ -18,11 +22,19 @@ const AllTransactions = ({ data }) => {
             customer.transactions.map((transaction, index) => (
               <tr key={`${customer.customerName}-${index}`}>
                 {index === 0 && (
-                  <td rowSpan={customer.transactions.length}>
-                    {customer.customerName}
-                  </td>
+                  <>
+                    <td rowSpan={customer.transactions.length}>
+                      {customer.customerName}
+                    </td>
+                    <td rowSpan={customer.transactions.length}>
+                      {customer.customerId}
+                    </td>
+                  </>
                 )}
-                <td>{transaction.date}</td>
+                <td>{getYear(transaction.date)}</td>
+                <td>{getMonth(transaction.date)}</td>
+
+                <td>{transaction.transactionId}</td>
                 <td>${transaction.amount.toFixed(2)}</td>
                 <td>{calculatePoints(transaction.amount)}</td>
               </tr>

@@ -7,9 +7,13 @@ describe("AllTransactions", () => {
     render(<AllTransactions data={transactions} />);
 
     expect(screen.getByTestId("customer-name").toBeInTheDocument);
-    expect(screen.getByTestId("date").toBeInTheDocument);
+    expect(screen.getByTestId("customer-id").toBeInTheDocument);
+    expect(screen.getByTestId("year").toBeInTheDocument);
+    expect(screen.getByTestId("month").toBeInTheDocument);
+    expect(screen.getByTestId("transaction-id").toBeInTheDocument);
     expect(screen.getByTestId("amount").toBeInTheDocument);
     expect(screen.getByTestId("points").toBeInTheDocument);
+
     expect(screen.getByText(/Jack Doe/i)).toBeInTheDocument();
   });
 });

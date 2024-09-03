@@ -1,4 +1,5 @@
 import { calculatePoints, totalPoint } from "../utils/calculatePoints";
+import { getMonth, getYear } from "../utils/getDates";
 
 const MonthlyTransactions = ({ data }) => {
   return (
@@ -13,7 +14,9 @@ const MonthlyTransactions = ({ data }) => {
             <table>
               <thead>
                 <tr>
-                  <th>Date</th>
+                  <th>Year</th>
+                  <th>Month</th>
+                  <th>Transaction Id</th>
                   <th>Amount</th>
                   <th>Points</th>
                   <th>Total Rewards</th>
@@ -23,7 +26,9 @@ const MonthlyTransactions = ({ data }) => {
                 {customer.transactions.map((transaction, idx) => {
                   return (
                     <tr key={idx}>
-                      <td>{transaction.date}</td>
+                      <td>{getYear(transaction.date)}</td>
+                      <td>{getMonth(transaction.date)}</td>
+                      <td>{transaction.transactionId}</td>
                       <td>$ {transaction.amount}</td>
                       <td>{calculatePoints(transaction.amount)}</td>
                       {idx === 0 && (

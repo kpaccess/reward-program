@@ -17,23 +17,27 @@ describe(" Monthly Transactions", () => {
         "Monthwise Transactions for each customer and total rewards"
       )
     ).toBeInTheDocument();
-
     expect(screen.queryByText(/John Doe/i)).toBeInTheDocument();
+
     expect(
-      screen.getAllByRole("columnheader", { name: /Date/i })[0]
+      screen.getAllByRole("columnheader", { name: /year/i })[0]
+    ).toBeInTheDocument();
+    expect(
+      screen.getAllByRole("columnheader", { name: /month/i })[0]
+    ).toBeInTheDocument();
+    expect(
+      screen.getAllByRole("columnheader", { name: /Transaction Id/i })[0]
     ).toBeInTheDocument();
     expect(
       screen.getAllByRole("columnheader", { name: /Amount/i })[0]
     ).toBeInTheDocument();
-
     expect(
       screen.getAllByRole("columnheader", { name: /Points/i })[0]
     ).toBeInTheDocument();
     expect(
-      screen.getAllByRole("columnheader", { name: /Date/i })[0]
+      screen.getAllByRole("columnheader", { name: /Total Rewards/i })[0]
     ).toBeInTheDocument();
 
-    expect(screen.getByText("2024-06-02")).toBeInTheDocument();
     expect(screen.getByText("$ 200.65")).toBeInTheDocument();
 
     expect(calculatePoints).toHaveBeenCalledWith(120.9);
