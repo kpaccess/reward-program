@@ -18,8 +18,8 @@ const AllTransactions = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data?.map((customer) =>
-            customer.transactions.map((transaction, index) => (
+          {data.map((customer) => {
+            return customer.transactions.map((transaction, index) => (
               <tr key={`${customer.customerName}-${index}`}>
                 {index === 0 && (
                   <>
@@ -38,8 +38,8 @@ const AllTransactions = ({ data }) => {
                 <td>${transaction.amount.toFixed(2)}</td>
                 <td>{calculatePoints(transaction.amount)}</td>
               </tr>
-            ))
-          )}
+            ));
+          })}
         </tbody>
       </table>
     </div>

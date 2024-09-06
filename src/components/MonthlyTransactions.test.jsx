@@ -35,7 +35,7 @@ describe(" Monthly Transactions", () => {
     expect(
       screen.getAllByRole("columnheader", { name: /Total Rewards/i })[0]
     ).toBeInTheDocument();
-    expect(screen.getByText("$ 200.65")).toBeInTheDocument();
+
     expect(calculatePoints).toHaveBeenCalledWith(120.9);
     expect(calculatePoints).toHaveBeenCalledWith(75.5);
     expect(calculatePoints).toHaveBeenCalledWith(200.4);

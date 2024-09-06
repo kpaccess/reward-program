@@ -1,22 +1,22 @@
 const monthNames = [
-  "January",
-  "February",
+  "Jan",
+  "Feb",
   "March",
   "April",
   "May",
   "June",
   "July",
   "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
 ];
 
 export const getMonth = (date) => {
   const d = new Date(date);
-  const month = d.getMonth() + 1;
-  return monthNames[month];
+  const month = d.getMonth();
+  return monthNames[month + 1];
 };
 
 export function getYear(date) {
