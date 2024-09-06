@@ -13,39 +13,15 @@ This React.js + Vite application calculates and displays rewared points for cust
 - [Error](#error)
 - [Success](#success)
 - [Usage](#usage)
-
-## File Structure
-
-- src
-  - api
-    - api.js
-  - components
-    - AllTransactions.jsx
-    - AllTransactions.test.jsx
-    - App.jsx
-    - App.test.jsx
-    - MonthlyTransactions.jsx
-    - MonthlyTransactions.test.jsx
-    - Rewards.jsx
-    - Rewards.test.jsx
-  - data
-    - data.js
-  - styles
-    - App.css
-    - index.css
-  - utils
-    - calculatePoints.js
-    - calculatePoints.test.js
-      main.jsx
-      index.jsx
+- [Tests](#tests)
 
 ## Features
 
-- ** Rewards Calculation:** Automatically calculates reward points based on based on transaction amounts using predefined rules.
-- \*\* Monthly and Total Aggregation: Displays points earned by each customer per month and in total.
-- \*\*Simulated API Calls: \*\* Demonstrates how to handle asynchronous data fetching in React
-- ** Error Handling: ** Gracefully manages errors and displays appropriate error messages
-- ** Loading Indicator: ** Provides feedback during data fetching with loading state
+- **Rewards Calculation:** Automatically calculates reward points based on based on transaction amounts using predefined rules.
+- **Monthly and Total Aggregation**: Displays points earned by each customer per month and in total.
+- **Simulated API Calls:** Demonstrates how to handle asynchronous data fetching in React
+- **Error Handling:** Gracefully manages errors and displays appropriate error messages
+- **Loading Indicator:** Provides feedback during data fetching with loading state
 
 ## Installation
 
@@ -64,10 +40,10 @@ To run this project locally, follow the steps below:
     npm install
 ```
 
-3. **\*Start the development server:**
+3. **Start the development server:**
 
 ```base
-    npm start
+    npm run dev
 ```
 
 ## Usage
@@ -76,8 +52,8 @@ To run this project locally, follow the steps below:
 
 The reward points are calculated base on the following rules:
 
-- **2 points ** for every dollar spent over $100 in a single transaction.
-- ** 1 points ** for every dollar spend between $50 and $100 in a single transaction.
+- **2 points** for every dollar spent over $100 in a single transaction.
+- **1 points** for every dollar spend between $50 and $100 in a single transaction.
 
 For example:
 
@@ -89,18 +65,22 @@ For example:
 
 ## Loading
 
-- When data is being loaded, the app displays a loading message: <img src="./src/images/loader.png">
+- When data is being loaded, the app displays a loading message: <img src="./public/images/loader.png">
 
 ## Error
 
 - If there is an error while fetching data, an error message is displayed:
-  <img src="./src/images/error.png">
+  <img src="./public/images/error.png">
 
 ## Success
 
-- When data is successfully fetched, the amount is computed, and the date and points are displayed
-  <img src="./src/images/success.png">
+- When data is successfully fetched, the amount is computed, and the date and points are displayed.
+  <img src="./public/images/success.png">
 
 ## Usage
 
 - To run the app, start your development server and visit the specified URL in your browser. The app will display the transactions and their calculated points based on the rules mentioned above.
+
+## Tests
+
+<img src="./public/images/tests.png">

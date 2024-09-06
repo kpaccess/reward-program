@@ -1,13 +1,9 @@
-import { transactions } from "../data/data";
+export const fetchTransactions = async () => {
+  const response = await fetch("../../data/data.json");
 
-export const fetchTransactions = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      try {
-        resolve(transactions);
-      } catch (error) {
-        reject(new Error("Failed to fetch transactions"));
-      }
-    }, 1000);
-  });
+  if (!response.ok) {
+    throw new Error("Failed to fetch transaction");
+  }
+
+  return response.json();
 };

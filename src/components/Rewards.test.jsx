@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import Rewards from "./Rewards";
 import { fetchCustomerData } from "../api/api";
-import { transactions } from "../data/data";
+import transactions from "../../public/data/data.json";
 
 vi.mock("../api/api", () => ({
   fetchCustomerData: vi.fn(),
