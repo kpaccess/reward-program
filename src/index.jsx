@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import App from "./components/App.jsx";
 import { fetchTransactions } from "./api/api.js";
-import { ErrorFallback } from "./utils/ErrorFallback.jsx";
+import { ErrorFallback } from "./utils/helper/ErrorFallback.jsx";
 
 const Driver = () => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -14,11 +14,11 @@ const Driver = () => {
       try {
         const response = await fetchTransactions();
         setData(response);
-        setLoading(false);
+        setIsLoading(false);
       } catch (err) {
         setError(err.message || "An error occurred while fetching data");
       } finally {
-        setLoading(false);
+        setIsLoading(false);
       }
     };
     getData();
@@ -26,7 +26,7 @@ const Driver = () => {
 
   return (
     <ErrorBoundary fallback={() => ErrorFallback(error)}>
-      <App data={data} loading={loading} error={error} />
+      <App data={data} loading={isLoading} error={error} />
     </ErrorBoundary>
   );
 };

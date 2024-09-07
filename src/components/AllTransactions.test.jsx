@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import AllTransactions from "./AllTransactions";
-// import { transactions } from "../data/data";
 import transactions from "../../public/data/data.json";
 
 describe("AllTransactions", () => {

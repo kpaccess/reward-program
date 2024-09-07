@@ -1,5 +1,5 @@
-import { calculatePoints } from "../utils/calculatePoints";
-import { getYear, getMonth } from "../utils/getDates";
+import { calculatePoints } from "../utils/helper/calculatePoints";
+import { getYear, getMonth } from "../utils/helper/getDates";
 
 const AllTransactions = ({ data }) => {
   return (

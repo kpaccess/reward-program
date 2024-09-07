@@ -1,4 +1,4 @@
-import { totalPoint } from "../utils/calculatePoints";
+import { totalPoint } from "../utils/helper/calculatePoints";
 const Rewards = ({ data }) => {
   return (
     <div className="rewards">

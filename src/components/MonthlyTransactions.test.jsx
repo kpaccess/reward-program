@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import MonthlyTransactions from "./MonthlyTransactions";
 import transactions from "../../public/data/data.json";
-import { calculatePoints, totalPoint } from "../utils/calculatePoints";
+import { calculatePoints, totalPoint } from "../utils/helper/calculatePoints";
 
-vi.mock("../utils/calculatePoints", () => ({
+vi.mock("../utils/helper/calculatePoints", () => ({
   calculatePoints: vi.fn((amount) => amount),
   totalPoint: vi.fn(() => 100),
 }));
