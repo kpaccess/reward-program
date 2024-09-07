@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { calculatePoints, totalPoint } from "../utils/helper/calculatePoints";
 import { getMonth, getYear } from "../utils/helper/getDates";
 
@@ -46,5 +47,17 @@ const MonthlyTransactions = ({ data }) => {
       })}
     </div>
   );
+};
+
+MonthlyTransactions.propTypes = {
+  customerId: PropTypes.number,
+  customerName: PropTypes.string,
+  transactions: PropTypes.arrayOf(
+    PropTypes.shape({
+      amount: PropTypes.number,
+      date: PropTypes.data,
+      transactionId: PropTypes.string,
+    })
+  ),
 };
 export default MonthlyTransactions;

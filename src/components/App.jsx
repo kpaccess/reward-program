@@ -5,6 +5,7 @@ import Rewards from "./Rewards";
 
 const App = ({ data, loading, error }) => {
   if (loading) return <p data-testid="loading" className="loader"></p>;
+
   if (error)
     return (
       <p data-testid="error" className="error">

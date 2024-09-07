@@ -1,4 +1,7 @@
+import PropTypes from "prop-types";
+
 import { totalPoint } from "../utils/helper/calculatePoints";
+
 const Rewards = ({ data }) => {
   return (
     <div className="rewards">
@@ -27,4 +30,17 @@ const Rewards = ({ data }) => {
     </div>
   );
 };
+
+Rewards.propTypes = {
+  customerName: PropTypes.string,
+  totalPoints: PropTypes.func,
+  transactions: PropTypes.arrayOf(
+    PropTypes.shape({
+      amount: PropTypes.number,
+      date: PropTypes.data,
+      transactionId: PropTypes.string,
+    })
+  ),
+};
+
 export default Rewards;
