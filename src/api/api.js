@@ -55,7 +55,5 @@ export const fetchTransactions = async () => {
     consecutiveMonths
   );
 
-  console.log(" filtered Data ", filteredData);
-
   return filteredData;
 };
