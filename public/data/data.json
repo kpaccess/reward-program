@@ -18,7 +18,7 @@
       { "date": "2024-01-12", "amount": 100.9, "transactionId": 201 },
       { "date": "2024-02-15", "amount": 175.5, "transactionId": 202 },
       { "date": "2024-03-02", "amount": 300.4, "transactionId": 203 },
-      { "date": "2024-07-08", "amount": 400.0, "transactionId": 304 }
+      { "date": "2024-07-08", "amount": 400.0, "transactionId": 204 }
     ]
   },
   {

@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { nanoid } from "nanoid";
 import { calculatePoints } from "../utils/helper/calculatePoints";
 import { getYear, getMonth } from "../utils/helper/getDates";
 
@@ -22,7 +23,7 @@ const AllTransactions = ({ data }) => {
           {data.length > 0 &&
             data.map((customer) => {
               return customer.transactions.map((transaction, index) => (
-                <tr key={`${customer.customerName}-${index}`}>
+                <tr key={nanoid()}>
                   {index === 0 && (
                     <>
                       <td rowSpan={customer.transactions.length}>
