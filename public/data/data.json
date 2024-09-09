@@ -8,7 +8,7 @@
       { "date": "2024-03-02", "amount": 200.4, "transactionId": 103 },
       { "date": "2024-07-08", "amount": 400.0, "transactionId": 104 },
       { "date": "2024-08-08", "amount": 200.0, "transactionId": 105 },
-      { "date": "2024-09-08", "amount": 100.0, "transactionId": 106 }
+      { "date": "2023-09-08", "amount": 100.0, "transactionId": 106 }
     ]
   },
   {
@@ -29,6 +29,16 @@
       { "date": "2024-02-15", "amount": 175.5, "transactionId": 302 },
       { "date": "2024-03-02", "amount": 140.4, "transactionId": 303 },
       { "date": "2024-07-08", "amount": 400.0, "transactionId": 304 }
+    ]
+  },
+  {
+    "customerId": 4,
+    "customerName": "Siddharth S",
+    "transactions": [
+      { "date": "2024-01-12", "amount": 80.9, "transactionId": 305 },
+      { "date": "2023-02-15", "amount": 120, "transactionId": 306 },
+      { "date": "2024-03-02", "amount": 140.4, "transactionId": 307 },
+      { "date": "2024-07-08", "amount": 400.0, "transactionId": 308 }
     ]
   }
 ]
