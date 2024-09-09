@@ -36,7 +36,8 @@
     "customerName": "Siddharth S",
     "transactions": [
       { "date": "2024-01-12", "amount": 80.9, "transactionId": 305 },
-      { "date": "2023-01-15", "amount": 120, "transactionId": 306 },
+      { "date": "2023-01-15", "amount": 120, "transactionId": 406 },
+      { "date": "2024-02-15", "amount": 150, "transactionId": 306 },
       { "date": "2024-03-02", "amount": 140.4, "transactionId": 307 },
       { "date": "2024-07-08", "amount": 400.0, "transactionId": 308 }
     ]
