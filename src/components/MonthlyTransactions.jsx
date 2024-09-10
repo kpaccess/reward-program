@@ -10,7 +10,7 @@ const MonthlyTransactions = ({ data }) => {
         const totalPoints = totalPoint(customer);
 
         return (
-          <div key={index}>
+          <div key={customer.customerId}>
             <h3>{customer.customerName}</h3>
             <table>
               <thead>
@@ -26,7 +26,9 @@ const MonthlyTransactions = ({ data }) => {
               <tbody>
                 {customer.transactions.map((transaction, idx) => {
                   return (
-                    <tr key={idx}>
+                    <tr
+                      key={`${customer.customerId} - ${transaction.transactionId}`}
+                    >
                       <td>{getYear(transaction.date)}</td>
                       <td>{getMonth(transaction.date)}</td>
                       <td>{transaction.transactionId}</td>
